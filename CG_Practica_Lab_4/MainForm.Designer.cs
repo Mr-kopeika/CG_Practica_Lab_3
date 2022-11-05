@@ -1,6 +1,6 @@
 ﻿namespace CG_Practica_Lab_3
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -218,7 +218,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.DrawButton);
             this.Name = "Form1";
-            this.Text = "Lab3";
+            this.Text = "Form1";
             this.Resize += new System.EventHandler(this.DrawButton_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
