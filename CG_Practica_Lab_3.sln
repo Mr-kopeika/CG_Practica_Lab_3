@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGL-Lab", "OpenGL-Lab\Op
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTK-Lab", "OpenTK-Lab\OpenTK-Lab.csproj", "{4277AB8D-4BBC-4293-B72F-62004C6CB1C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGL_6", "OpenGL_6\OpenGL_6.csproj", "{F6360578-065D-4E69-B918-074378481ECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGL_6_Lab", "OpenGL_6_Lab\OpenGL_6_Lab.csproj", "{2EFF8897-1E49-4A70-B9A7-48722468E349}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{4277AB8D-4BBC-4293-B72F-62004C6CB1C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4277AB8D-4BBC-4293-B72F-62004C6CB1C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4277AB8D-4BBC-4293-B72F-62004C6CB1C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6360578-065D-4E69-B918-074378481ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6360578-065D-4E69-B918-074378481ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6360578-065D-4E69-B918-074378481ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6360578-065D-4E69-B918-074378481ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFF8897-1E49-4A70-B9A7-48722468E349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFF8897-1E49-4A70-B9A7-48722468E349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFF8897-1E49-4A70-B9A7-48722468E349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFF8897-1E49-4A70-B9A7-48722468E349}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
