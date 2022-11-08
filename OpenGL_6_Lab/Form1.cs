@@ -66,19 +66,20 @@ namespace OpenGL_6_Lab
 
             Gl.glMatrixMode(Gl.GL_PROJECTION);
             Gl.glLoadIdentity();
-            
+            Gl.glFrustum(-1, 1, -1, 1, 3, 10);
+            Gl.glTranslated(0, 0, -4);
 
-            SetProectionMatrix();
-            for (int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 4; j++)
-                {
-                    pMatrix[i * 4 + j] = proectionMatrix[i, j];
-                }
-            }
+            //SetProectionMatrix();
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    for (int j = 0; j < 4; j++)
+            //    {
+            //        pMatrix[i * 4 + j] = proectionMatrix[i, j];
+            //    }
+            //}
 
             //Gl.glLoadMatrixd(pMatrix);
-            Gl.glOrtho(-1, 1, -1, 1, -1, 1);
+            //Gl.glOrtho(-1, 1, -1, 1, -1, 1);
 
             Gl.glCullFace(Gl.GL_BACK);
             DrawAxis();
@@ -260,10 +261,12 @@ namespace OpenGL_6_Lab
             if (checkBox1.Checked)
             {
                 Gl.glPolygonMode(Gl.GL_FRONT_AND_BACK, Gl.GL_FILL);
+                Gl.glDisable(Gl.GL_CULL_FACE);
             }
             else
             {
                 Gl.glPolygonMode(Gl.GL_FRONT_AND_BACK, Gl.GL_LINE);
+                Gl.glDisable(Gl.GL_CULL_FACE);
             }
         }
     }

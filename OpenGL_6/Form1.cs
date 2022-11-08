@@ -17,7 +17,7 @@ namespace OpenGL_6
         int corners = 5;
         double[] center = new double[4] { 0, 0, 0, 0 };
         double radius = 4;
-        double step = 0.1;
+        double step = 0.2;
         double[,] proectionMatrix;
         double[] pMatrix = new double[16];
         double angleX = 30 * Math.PI / 180;
@@ -49,18 +49,23 @@ namespace OpenGL_6
 
             Gl.glMatrixMode(Gl.GL_PROJECTION);
             Gl.glLoadIdentity();
-            Gl.glOrtho(-1.0, -1.0, -1.0, 1.0, 1.0, 1.0);
+            //Gl.glOrtho(-1.0, -1.0, -1.0, 1.0, -1.0, 1.0);
 
-            SetProectionMatrix();
-            for(int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 4; j++)
-                {
-                    pMatrix[i * 4 + j] = proectionMatrix[i, j];
-                }
-            }
+            Gl.glFrustum(-1f, 1f, -1f, 1f, 3f, 10);
+            Gl.glTranslated(0, 0, -5);
+            Gl.glMatrixMode(Gl.GL_MODELVIEW);
+            
 
-            Gl.glLoadMatrixd(pMatrix);
+            //SetProectionMatrix();
+            //for(int i = 0; i < 4; i++)
+            //{
+            //    for (int j = 0; j < 4; j++)
+            //    {
+            //        pMatrix[i * 4 + j] = proectionMatrix[i, j];
+            //    }
+            //}
+
+            //Gl.glLoadMatrixd(pMatrix);
             
             //DrawAxis();
 
@@ -69,11 +74,15 @@ namespace OpenGL_6
             Gl.glPolygonMode(Gl.GL_FRONT_AND_BACK, Gl.GL_LINE);
             Gl.glCullFace(Gl.GL_FRONT);
             Gl.glLineStipple(2, 0XFFFF);
+            Gl.glPopMatrix();
             DrawFigure();
+            Gl.glPushMatrix();
 
             Gl.glCullFace(Gl.GL_BACK);
             Gl.glLineStipple(2, 0X00FF);
+            Gl.glPopMatrix();
             DrawFigure();
+            Gl.glPushMatrix();
 
 
 
@@ -83,7 +92,6 @@ namespace OpenGL_6
         public void DrawFigure()
         {
             double[,] spf = startPositionFigure;
-            //Gl.glEnable(Gl.GL_CULL_FACE);
             Gl.glLineWidth(3);
             Gl.glColor3b(0, 0, 0);
             Gl.glBegin(Gl.GL_TRIANGLES);
@@ -108,6 +116,14 @@ namespace OpenGL_6
                 Gl.glVertex3d(step * spf[5, 0], step * spf[5, 1], step * spf[5, 2]);
                 Gl.glVertex3d(step * spf[1, 0], step * spf[1, 1], step * spf[1, 2]);
 
+            Gl.glEnd();
+
+            Gl.glBegin(Gl.GL_POLYGON);
+            Gl.glVertex3d(step * spf[5, 0], step * spf[5, 1], step * spf[5, 2]);
+            Gl.glVertex3d(step * spf[4, 0], step * spf[4, 1], step * spf[4, 2]);
+            Gl.glVertex3d(step * spf[3, 0], step * spf[3, 1], step * spf[3, 2]);
+            Gl.glVertex3d(step * spf[2, 0], step * spf[2, 1], step * spf[2, 2]);
+            Gl.glVertex3d(step * spf[1, 0], step * spf[1, 1], step * spf[1, 2]);
             Gl.glEnd();
         }
         
@@ -200,9 +216,12 @@ namespace OpenGL_6
         {
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT | Gl.GL_DEPTH_BUFFER_BIT);
             Yrotate += 20 * Math.PI / 180;
+            Xrotate += 15 * Math.PI / 180;
             Gl.glMatrixMode(Gl.GL_MODELVIEW);
             Gl.glLoadIdentity();
+            //Gl.glTranslated(0, 0, -7);
             Gl.glRotated(Yrotate, 0, 1, 0);
+            Gl.glRotated(Yrotate, 1, 0, 0);
 
             Gl.glPolygonMode(Gl.GL_FRONT_AND_BACK, Gl.GL_LINE);
             Gl.glCullFace(Gl.GL_BACK);
