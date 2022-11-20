@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGL_6", "OpenGL_6\OpenGL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGL_6_Lab", "OpenGL_6_Lab\OpenGL_6_Lab.csproj", "{2EFF8897-1E49-4A70-B9A7-48722468E349}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGL_7", "OpenGL_7\OpenGL_7.csproj", "{FCC3013A-8F0E-485D-B2AC-1AD0A5EE646A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGL_7_Lab", "OpenGL_7_Lab\OpenGL_7_Lab.csproj", "{8860AC9B-1F44-437A-ACD8-83D19C7DFAD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{2EFF8897-1E49-4A70-B9A7-48722468E349}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EFF8897-1E49-4A70-B9A7-48722468E349}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EFF8897-1E49-4A70-B9A7-48722468E349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCC3013A-8F0E-485D-B2AC-1AD0A5EE646A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC3013A-8F0E-485D-B2AC-1AD0A5EE646A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC3013A-8F0E-485D-B2AC-1AD0A5EE646A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC3013A-8F0E-485D-B2AC-1AD0A5EE646A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8860AC9B-1F44-437A-ACD8-83D19C7DFAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8860AC9B-1F44-437A-ACD8-83D19C7DFAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8860AC9B-1F44-437A-ACD8-83D19C7DFAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8860AC9B-1F44-437A-ACD8-83D19C7DFAD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
